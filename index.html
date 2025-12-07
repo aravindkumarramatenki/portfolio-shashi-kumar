@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ramatenki Shashi Kumar — VLSI Physical Design</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="description" content="Ramatenki Shashi Kumar — Physical Design Engineer. RTL-to-GDSII, Timing Closure, CTS, ECO — 28nm experience." />
+</head>
+<body>
+
+  <svg class="chip-bg" aria-hidden="true" width="0" height="0">
+    <defs>
+      <pattern id="chipPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+        <rect width="40" height="40" fill="none"></rect>
+        <path d="M0 0 L40 0 M0 20 L40 20 M0 40 L40 40" stroke-opacity="0.04" stroke="#00bfff" stroke-width="1"/>
+      </pattern>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-initials">R.S.K.</div>
+        <div class="brand-meta">
+          <div class="name">Ramatenki Shashi Kumar</div>
+          <div class="title">Physical Design Engineer</div>
+        </div>
+      </div>
+
+      <nav class="nav" id="main-nav">
+        <a href="#hero">🏠 Home</a>
+        <a href="#projects">💻 Projects</a>
+        <a href="#skills">🛠️ Experience</a>
+        <a href="#contact">🔗 Connect</a>
+      </nav>
+
+      <button id="mobile-nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="hero" class="hero container">
+      <div class="hero-left">
+        <h1 class="hero-title">RAMATENKI SHASHI KUMAR</h1>
+        <p class="hero-sub">Aspiring Physical Design Engineer | VLSI Backend Flow Specialist</p>
+
+        <p class="hero-blurb">
+          Trained on complete RTL-to-GDSII flow using Synopsys and Cadence tools. Hands-on experience in Timing Closure, CTS, ECO fixes and backend optimization on 28nm technology.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#projects" class="btn primary">View 28nm Case Studies →</a>
+          <a href="#contact" class="btn ghost">Contact</a>
+        </div>
+
+        <ul class="hero-meta">
+          <li><strong>Tools:</strong> Design Compiler · Genus · Innovus · PrimeTime</li>
+          <li><strong>Scripting:</strong> TCL · Python · C</li>
+        </ul>
+      </div>
+
+      <div class="hero-right">
+        <div class="chip-card" aria-hidden="true">
+          <div class="chip-top">
+            <svg viewBox="0 0 200 60" class="wave-svg"><path d="M0 30 Q50 10 100 30 T200 30" fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="chip-body">
+            <div class="chip-lines">
+              <div class="chip-line code">Technology: <span class="mono">TSMC 28nm</span></div>
+              <div class="chip-line code">Target: <span class="mono">500 MHz</span></div>
+              <div class="chip-line code">Gate Count: <span class="mono">~280K</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2 class="section-title">Technical Expertise & Training</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Professional Training</h3>
+          <p>VLSI-Physical Design Course — Sumedha IT, Hyderabad. 6 months focused on RTL→GDSII flow, synthesis, STA, floorplanning, P&R and timing closure.</p>
+        </div>
+
+        <div class="card">
+          <h3>Core Concepts & Scripting</h3>
+          <ul class="skill-list">
+            <li><strong>PD Flow:</strong> Floorplanning · Placement · CTS · ECO</li>
+            <li><strong>Timing:</strong> STA · SSTA · Timing QoR</li>
+            <li><strong>Scripting:</strong> TCL (basics) · Python · C · TCSH</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tools">
+        <h4>EDA Tools</h4>
+        <div class="tool-list">
+          <span class="tool">Design Compiler</span>
+          <span class="tool">Genus</span>
+          <span class="tool">Innovus</span>
+          <span class="tool">PrimeTime</span>
+          <span class="tool">Tempus</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2 class="section-title">VLSI Project Case Studies</h2>
+      <p class="muted">Click any case card to view detailed process notes and results.</p>
+
+      <div class="grid grid-3 projects-grid">
+        <article class="project-card" data-key="block1">
+          <div class="project-head">
+            <h3>Block-I — Optimization & Timing Closure</h3>
+            <span class="tag">TSMC 28nm · 280K cells · 500MHz</span>
+          </div>
+          <p class="project-excerpt">Floorplanning, congestion mitigation, CTS with CCD, and ECO fixes to achieve timing closure.</p>
+          <button class="btn small open-case" data-key="block1">Open Case</button>
+        </article>
+
+        <article class="project-card" data-key="block2">
+          <div class="project-head">
+            <h3>Block-II — RTL Synthesis & Timing Validation</h3>
+            <span class="tag">TSMC 28nm · 421 gates · dual-clock 200MHz</span>
+          </div>
+          <p class="project-excerpt">RTL-to-GLN synthesis and timing QoR improvements using path groups and timing sanity checks.</p>
+          <button class="btn small open-case" data-key="block2">Open Case</button>
+        </article>
+
+        <article class="project-card" data-key="block3">
+          <div class="project-head">
+            <h3>Block-III — Placement & Clock Implementation</h3>
+            <span class="tag">TSMC 28nm · 60K gates · 400MHz</span>
+          </div>
+          <p class="project-excerpt">Incremental placement optimization and clock-tree building using NDR to minimize skew.</p>
+          <button class="btn small open-case" data-key="block3">Open Case</button>
+        </article>
+      </div>
+    </section>
+
+    <div id="case-modal" class="case-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="case-wrap">
+        <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+        <div class="case-content" id="case-content">
+          </div>
+      </div>
+    </div>
+
+    <section id="academics" class="section container">
+      <h2 class="section-title">Academic Projects & Certifications</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Certifications</h3>
+          <ul>
+            <li><i class="fas fa-certificate"></i> Basic Static Timing Analysis — Cadence</li>
+            <li><i class="fas fa-certificate"></i> Advanced Embedded Technology — CITD</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Academic Projects</h3>
+          <ul>
+            <li><strong>Automated Paralysis Patient Care System:</strong> Sensor-based vitals tracking and automated alert system.</li>
+            <li><strong>Fruit Disease Detection:</strong> Image-processing pipeline for segmentation & feature extraction to detect diseases.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container contact-section">
+      <h2 class="section-title">Connect</h2>
+      <div class="contact-grid">
+        <div class="contact-details">
+          <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:ramatenkishashi17@gmail.com">ramatenkishashi17@gmail.com</a></p>
+          <p><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shashi-kumar22" target="_blank" rel="noopener">shashi-kumar22</a></p>
+          <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91-9347310026</p>
+        </div>
+
+        <div class="resume-cta">
+          <p>Download resume or get in touch for detailed case-study PDFs and EDA report snippets.</p>
+          <a class="btn primary" href="Ramatenki_Shashi_Kumar_Resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Ramatenki Shashi Kumar — Physical Design. Designed for VLSI recruiters & engineers.</small>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

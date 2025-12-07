@@ -1,0 +1,305 @@
+/* style.css — Deep Navy / Electric Teal VLSI Theme */
+
+/* Reset + variables */
+:root{
+  --bg: #06080e; /* Slightly darker */
+  --card: #0f1724;
+  --muted: #9aa6b2;
+  --text: #FFFFFF;
+  --accent: #00BFFF;
+  --accent-glow: rgba(0, 191, 255, 0.4); /* New glow variable */
+  --accent-2: #00E6C7;
+  --glass: rgba(255,255,255,0.04);
+  --mono-font: "Fira Code", monospace;
+  --ui-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --radius: 12px;
+  --container: 1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--ui-font);
+  /* Deeper background gradient */
+  background: linear-gradient(180deg, rgba(4,6,12,1) 0%, rgba(10,10,26,1) 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  background-color:var(--bg);
+  min-height:100%;
+  line-height:1.6; /* Increased for better readability */
+}
+
+/* container */
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:28px;
+}
+
+/* chip background (subtle) */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L40 0 M0 20 L40 20 M0 40 L40 40 M0 0 L0 40 M20 0 L20 40 M40 0 L40 40" stroke="rgb(0,191,255)" stroke-width="1" stroke-opacity="0.04" fill="none"/></svg>');
+  background-size:40px 40px;
+  pointer-events:none;
+  z-index:0;
+  mix-blend-mode:normal;
+  opacity:0.6; /* Increased opacity slightly */
+}
+
+/* header */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:40;
+  backdrop-filter: blur(8px); /* Increased blur */
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  background: linear-gradient(180deg, rgba(10,10,18,0.7), rgba(10,10,18,0.4)); /* Stronger blur effect */
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:12px 0;
+}
+
+/* brand styles omitted for brevity, assume they are correct */
+
+/* nav - START OF PREMIUM TOUCH */
+.nav{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  font-weight:700; /* Increased weight for a bolder, premium look */
+}
+.nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:14px;
+  padding:8px 10px;
+  border-radius:8px;
+  
+  /* Add subtle shadow for depth */
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  
+  /* Use the mono font for a technical look */
+  font-family: var(--mono-font); 
+  letter-spacing: 0.5px; 
+  border: 1px solid transparent; /* Keeps the spacing consistent */
+
+  transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+/* Premium Hover Effect */
+.nav a:hover,
+.nav a.active { 
+  color:var(--accent); /* Highlight text with Electric Teal */
+  background:rgba(0, 191, 255, 0.08); /* Faint teal background */
+  
+  /* Add the neon glow effect */
+  box-shadow: 0 0 10px var(--accent-glow);
+  border-color: var(--accent);
+}
+
+.nav a:hover {
+  transform: translateY(-1px); /* Subtle lift on hover */
+}
+
+/* Ensure the current section link looks active (Requires JavaScript to apply the 'active' class) */
+.nav a.active {
+  color:var(--text); 
+  border-bottom: 2px solid var(--accent); /* Stronger indicator for current page */
+  border-color: transparent;
+}
+/* nav - END OF PREMIUM TOUCH */
+
+/* mobile nav toggle (remains the same) */
+/* ... */
+
+/* hero */
+.hero{
+  display:flex;
+  gap:36px;
+  align-items:stretch;
+  padding-top:60px; /* Increased padding */
+  padding-bottom:60px;
+  position:relative;
+  z-index:1;
+}
+.hero-left{flex:1; padding-right:12px}
+.hero-right{width:320px; display:flex; align-items:center; justify-content:center}
+
+/* hero text */
+.hero-title{
+  font-size:26px; /* Slightly larger */
+  margin:0 0 6px 0;
+  letter-spacing:1px; /* Tighter tracking */
+  font-weight:900;
+  text-shadow: 0 0 8px rgba(255,255,255,0.05); /* Subtle text glow */
+}
+.hero-sub{color:var(--accent); margin:0 0 16px 0; font-family:var(--mono-font)} /* Accent color for sub-title */
+.hero-blurb{color:rgba(255,255,255,0.9); margin:0 0 24px 0; max-width:60ch; line-height:1.7}
+.hero-ctas{display:flex; gap:14px; align-items:center}
+.btn{
+  /* ... base button styles ... */
+  transition: all 180ms ease;
+}
+.btn.primary{
+  background:var(--accent);
+  color:var(--bg); /* Dark text on bright button */
+  border:1px solid var(--accent);
+  box-shadow: 0 4px 18px var(--accent-glow);
+  font-weight:700;
+}
+.btn.primary:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+.btn.ghost{
+  color:var(--muted);
+  border:1px solid rgba(255,255,255,0.1);
+}
+.btn.ghost:hover{
+  color:var(--text);
+  border-color:var(--accent);
+}
+
+.hero-meta{margin-top:30px; color:var(--muted); list-style:none; padding:0; border-top:1px dashed rgba(255,255,255,0.05); padding-top:18px;}
+.hero-meta li{margin:6px 0; font-size:14px}
+
+/* chip card */
+.chip-card{
+  /* Glassmorphism effect */
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+  border-radius:18px; /* Slightly more rounded */
+  padding:20px;
+  width:320px;
+  border:1px solid var(--accent-glow);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+.chip-line{font-size:14px;color:var(--muted); margin:8px 0}
+.mono{font-family:var(--mono-font); color:var(--accent); text-shadow: 0 0 4px var(--accent-glow)} /* Added glow to mono text */
+
+
+/* sections */
+.section{padding:50px 0 40px 0} /* More padding */
+.section-title{
+  font-size:22px; /* Slightly larger */
+  margin:0 0 24px 0;
+  font-weight:800;
+  letter-spacing:0.8px;
+  display:inline-block;
+  padding-bottom:4px;
+  border-bottom:2px solid var(--accent); /* Subtle accent underline */
+  text-shadow: 0 0 6px var(--accent-glow);
+}
+.muted{color:var(--muted)}
+
+/* grid, card styles omitted for brevity, assume they are correct */
+
+/* tool list enhancement */
+.tool{
+  background:var(--glass); 
+  padding:8px 10px; 
+  border-radius:8px; 
+  color:var(--accent); /* Accent color for tool names */
+  font-family:var(--mono-font);
+  border:1px solid rgba(0,191,255,0.1);
+}
+
+/* project card premium hover */
+.project-card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));
+  border-radius:12px;
+  padding:18px;
+  border:1px solid rgba(0,191,255,0.08);
+  transition: transform 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 250ms ease; /* Smoother transition */
+}
+.project-card:hover{
+  transform:translateY(-8px); /* More movement */
+  box-shadow:0 24px 60px rgba(0,0,0,0.8), 0 0 10px var(--accent-glow); /* Stronger shadow + subtle glow */
+  border-color: var(--accent); /* Border changes color */
+}
+.project-head h3{font-size:16px}
+.project-excerpt{color:var(--muted)}
+.project-card:hover .project-excerpt{color:var(--text)}
+
+/* --- MODAL VISIBILITY CONTROL (FIX) --- */
+
+/* 1. Base Modal Style (Hidden by default) */
+.case-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85); /* Dark overlay */
+  display: flex; /* Centers the content */
+  justify-content: center;
+  align-items: center;
+  z-index: 900;
+  
+  /* Start hidden */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease, visibility 300ms ease;
+}
+
+/* 2. Modal Active State (When JS changes aria-hidden to false) */
+.case-modal[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 3. Modal Content Wrapper */
+.case-wrap {
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh; /* Limits height to screen size */
+  overflow-y: auto; /* Allows scrolling inside the modal */
+  background: var(--card); /* Dark background from variables */
+  border-radius: var(--radius);
+  padding: 30px;
+  position: relative;
+  border: 1px solid var(--accent-glow);
+  
+  /* Add animation trigger */
+  animation: modal-enter 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0;
+  transform: scale(0.95) translateY(20px);
+}
+
+/* 4. Modal Close Button */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 901;
+}
+
+.modal-close:hover {
+  color: var(--accent);
+}
+
+@keyframes modal-enter {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.case-content h4{color:var(--accent); font-size:16px; border-bottom:1px dashed rgba(255,255,255,0.1); padding-bottom:4px;}
+.case-content li{margin-bottom:8px;} /* Better spacing */
+
+/* contact */
+.contact-details a{color:var(--accent); text-decoration:none}
+.contact-details i{color:var(--accent); margin-right:8px; width:20px;}
+.contact-section .contact-grid{align-items:flex-start}
+
+/* footer styles omitted for brevity, assume they are correct */
